@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #161628; /* Dark background */
+    color: #f5f5f5; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: #34c8e2; /* Soft red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h3, h2 {
+    margin: 10px;
+    color: #a8dadc; /* Light cyan */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Buttons and Inputs */
+#imgdiv{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+img {
+    cursor: pointer;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    height: 140px;
+    width: auto;
+    border-radius: 10px;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+img:hover {
+    transform: scale(1.1);
+    border-color: #6d6875; /* Soft purple */
+}
+
+img.selected {
+    transform: scale(1.3);
+    border-color: #4ecdc4; /* Bright turquoise */
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.8);
+}
+
+/* Input Field */
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #6d6875;
+    border-radius: 5px;
+    margin: 10px 5px;
+    width: 250px;
+    background-color: #2d2d44; /* Input background */
+    color: #f5f5f5; /* Text color */
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #9a9ade;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #f5f5f5;
+    background-color: #6d6875; /* Soft purple */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #4ecdc4; /* Bright turquoise */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Error Message */
+#errors {
+    font-size: 1rem;
+    color: #ff6b6b; /* Bright red */
+    margin-top: 10px;
+}
+
+/* Player List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(45, 45, 68, 0.8); /* Semi-transparent dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+ul li {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2d2d44; /* Dark background for list items */
+    margin-bottom: 2px;
+    border-radius: 5px;
+    color: #f5f5f5;
+}
+
+ul li img {
+    height: 30px;
+    margin-right: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    img {
+        height: 80px;
+    }
+
+    input[type="number"] {
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    ul li {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+/* List Item Styling */
+#Tplayers .player-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+#Tplayers .player-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Name Styling */
+#Tplayers .player-name {
+    flex-grow: 1; /* Push the score to the right */
+    font-size: 1.2rem;
+    color: #ffffff;
+    /* text-align: left; */
+}
+
+/* Score Styling */
+#Tplayers .player-score {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-align: right;
+    padding: 10px;
+}
