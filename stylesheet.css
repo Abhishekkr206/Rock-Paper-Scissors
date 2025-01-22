@@ -33,8 +33,10 @@ img {
     cursor: pointer;
     margin: 0 10px;
     border: 3px solid transparent;
-    height: 140px;
+    max-width: 100px;
+    max-height: 100px;
     width: auto;
+    height: auto;
     border-radius: 10px;
     transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
